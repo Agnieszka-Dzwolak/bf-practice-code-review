@@ -1,10 +1,13 @@
 /** .........
  * Sum of two numbers.
  *
- * @param {number} num1 - The first number to sum.
- * @param {number} num2 - The second number to sum.
- * @returns {number} The sum of num1 and num2.
+ * @param {array} [array=[]] - The array to flatten
+ * @returns {array} Return the new flatten array
  */
-export const solutionName = (num1, num2) => {
-    return num1 + num2;
+
+export const flattenArray = (array) => {
+    return array.flat(Infinity);
 };
+
+console.log(flattenArray([1, [2, [3, [4]], 5]]));
+console.log(flattenArray(['a', ['b', [['c'], ['d']], 'e']]));

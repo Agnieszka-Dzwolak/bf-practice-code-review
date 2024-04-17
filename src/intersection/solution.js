@@ -1,11 +1,25 @@
 /** .........
- * Sum of two numbers.
+ * function that finds all the values shared between two arrays.
  *
- * @param {number} num1 - The first number to sum.
- * @param {number} num2 - The second number to sum.
- * @returns {number} The sum of num1 and num2.
+ * @param {Array} [array=[]] - The array to inspect.
+ * @param {Array} [values=[]] - The values to include.
+ * @returns {Array} Returns the new array of filtered values.
  */
 
-export const solutionName = (num1, num2) => {
-    return num1 + num2;
+export const intersection = (array1, array2) => {
+    const newArray = [];
+
+    for (let i = 0; i < array1.length; i++) {
+        const element = array1[i];
+
+        for (let j = 0; j < array2.length; j++) {
+            if (element === array2[j]) {
+                newArray.push(element);
+            }
+        }
+    }
+    return newArray;
 };
+
+console.log(intersection([2, 1], [2, 3]));
+console.log(intersection([2, 1, 2], [2, 3]));

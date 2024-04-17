@@ -1,11 +1,27 @@
-/** .........
- * Sum of two numbers.
+/**
+ * Splits an object into multiple objects with one key/value pair each.
+ * The new objects are returned in an array.
  *
- * @param {number} num1 - The first number to sum.
- * @param {number} num2 - The second number to sum.
- * @returns {number} The sum of num1 and num2.
+ * This function has no side-effects, the argument object is not modified
+ *
+ * @param {Object} [toSeparate={}] - The object to split into key/value pairs.
+ * @returns {Array} Returns a new array with one entry for each key/value pair.
  */
 
-export const solutionName = (num1, num2) => {
-    return num1 + num2;
+const splitObject = (objectToSeparate) => {
+    const newObj = Object.entries(objectToSeparate).map(([key, value]) => ({
+        [key]: value,
+    }));
+    return newObj;
 };
+
+console.log(splitObject({ a: 1, b: 2, c: 3 }));
+// -> [{ a: 1 }, { b: 2 }, { c: 3 }]
+
+console.log(
+    splitObject({ name: 'robs', age: 25, tall: true, userName: 'sbor' }),
+);
+// -> [{ name: 'robs }, { age: 25 }, { tall: true }, { userName: 'sbor' }]
+
+console.log(splitObject({}));
+// -> []

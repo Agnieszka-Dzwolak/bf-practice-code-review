@@ -8,6 +8,7 @@
       "presets": ["@babel/preset-env"]
     }
   },
+  "eslint linebreak-style": ["error", "windows"],
   "env": {
     "browser": false
   },

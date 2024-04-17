@@ -12,7 +12,7 @@ helps you understand:
 
 ```js
 /**
- * Creates an array of values that are in the first array, but not not in the second array.
+ * Creates an array of values that are in the first array, but not in the second array.
  *
  * Repeated values are not duplicated in the return value, and the order of result values are determined by the first array.
  *
